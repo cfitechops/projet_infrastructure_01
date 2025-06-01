@@ -48,8 +48,8 @@
 
 ### 1. Installation de Windows Server
 
-- Nom : SRV-AD-01
+- Nom : `SRV-AD-01`
 
-- Configuration IP statique : 192.168.10.10/24, DNS primaire : 127.0.0.1
+- Configuration IP statique : `192.168.10.10/24`, DNS primaire : `127.0.0.1`
 
 - Renommer l’ordinateur
