@@ -116,23 +116,84 @@ Objectif : Automatiser le montage d’un lecteur réseau.
 
 ### 6. Configuration du partage de fichiers
 
-- Créer un dossier partagé :` D:\Partage`
+- **Étape 1 : Créer un dossier partagé**
 
-- Activer **le partage réseau**
+  - Créer le dossier : `D:\Partage`
 
-- Appliquer des autorisations **NTFS** (droits lecture/écriture)
+  `Tu peux créer ce dossier sur une partition dédiée ou sur le disque principal.`
 
-  - `Informatique` → contrôle total
+- **Étape 2 : Activer le partage réseau**
 
-  - `Etudiant1` → lecture seule
+  - Clique droit sur `D:\Partage` > **Propriétés** > **Partage**
 
-### 7. Politique de sécurité
+  - Cliquer sur **Partager**...
 
-- GPO de verrouillage de session après 10 min
+  - Ajouter les utilisateurs ou groupes (ex. `Informatique`, `Etudiant1`)
 
-- GPO de restriction des ports (via pare-feu Windows)
+  - Définir les **autorisations de partage** (lecture/écriture)
 
-- Configuration d’audit de connexion
+- **Étape 3** : Appliquer les autorisations **NTFS**
+
+  - Onglet **Sécurité** (toujours dans les propriétés du dossier)
+
+  - Cliquer sur **Modifier**... pour ajouter des utilisateurs/groupes
+
+  - Définir les **droits NTFS** (plus puissants et prioritaires que les droits de partage) :
+
+```sh
+| Utilisateur / Groupe | Autorisation NTFS  |
+| -------------------- | ------------------ |
+| `Informatique`       | **Contrôle total** |
+| `Etudiant1`          | **Lecture seule**  |
+```
+
+##### Rappel important :
+
+- Les **droits effectif**s = les plus restrictifs entre **partage** et **NTFS**.
+
+- Exemple : Si un utilisateur a **écriture** en NTFS mais seulement **lecture** dans le partage → il n’aura que **lecture**.
+
+### 7. Politique de sécurité (GPO)
+
+- **GPO : Verrouillage de session après 10 minutes**
+
+- GPO : `Verrouillage automatique`
+
+- Chemin : `Configuration utilisateur > Modèles d'administration > Panneau de configuration > Personnalisation`
+
+  - Activer l’écran de veille
+
+  - Temps d’inactivité : **600 secondes (10 min)**
+
+  - Mot de passe à la reprise : **Activé**
+
+- **GPO : Restriction des ports (pare-feu Windows)**
+- GPO : Pare-feu sécurité
+
+- Chemin : `Configuration ordinateur > Paramètres Windows > Paramètres de sécurité > Pare-feu Windows avec fonctions avancées de sécurité`
+
+  - Ajouter des règles de **trafic entrant** :
+
+    - Autoriser ou bloquer des ports (ex. bloquer port 21 FTP, autoriser 3389 RDP)
+
+- **GPO : Configuration d’audit de connexion**
+- GPO : Audit sécurité
+
+- Chemin : `Configuration ordinateur > Paramètres Windows > Paramètres de sécurité > Stratégies locales > Stratégie d’audit`
+
+  - Activer :
+
+    - **Audit des connexions aux comptes**
+
+    - **Audit des événements de connexion**
+
+  - Coche **Succès et Échecs**
+
+- Consulter les journaux dans l’**Observateur d’événements** : Journal Windows > Sécurité
+
+  - `ID 4624 = Connexion réussie`
+
+  - `ID 4625 = Connexion échouée`
 
 ## Installation du Windows Client
 
