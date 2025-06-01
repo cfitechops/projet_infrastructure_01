@@ -1,6 +1,6 @@
 # Infrastructure
 
-#### projet complet clé en main destiné aux étudiants en Technicien/Administration systèmes et réseaux, intégrant Windows Server, Windows Client, Ubuntu Server, ainsi que des outils de supervision et gestion comme Zabbix, GLPI, Wireshark, le tout avec Active Directory et les services essentiels (DNS, FTP(S), Web, GPO, partage, sécurité…).
+#### Projet complet clé en main destiné aux étudiants en TSPCR/Administration systèmes et réseaux, intégrant Windows Server, Windows Client, Ubuntu Server, ainsi que des outils de supervision et gestion comme Zabbix, GLPI, Wireshark, le tout avec Active Directory et les services essentiels (DNS, FTP(S), Web, GPO, partage, sécurité…).
 
 ## Objectifs pédagogiques
 
@@ -66,7 +66,7 @@
 
 ### 3. Installation du rôle IIS (Web)
 
-- Installer le rôle **IIS**
+- Installer le rôle **IIS** (serveur web Windows)
 
 - Créer un site web interne : `intranet.domaine.local`
 
@@ -79,6 +79,8 @@
 - Configurer un répertoire FTP sécurisé avec certificat SSL (auto-signé possible)
 
 - Autoriser le groupe `Informatique` uniquement
+
+- Tester avec `FileZilla` client
 
 ### 5. Création et application de GPO
 
@@ -168,6 +170,7 @@ Objectif : Automatiser le montage d’un lecteur réseau.
   - Mot de passe à la reprise : **Activé**
 
 - **GPO : Restriction des ports (pare-feu Windows)**
+
 - GPO : Pare-feu sécurité
 
 - Chemin : `Configuration ordinateur > Paramètres Windows > Paramètres de sécurité > Pare-feu Windows avec fonctions avancées de sécurité`
@@ -229,11 +232,13 @@ Objectif : Automatiser le montage d’un lecteur réseau.
 
 - Surveiller RAM, CPU, espace disque
 
+- Configurer Alertes de notifications utilisant Gmail
+
 ## Installation de GLPI avec LDAP
 
-### 11. GLPI sur Ubuntu
+### 11. GLPI sur Ubuntu et intégré à Active Directory
 
-- Installer Apache, MariaDB, PHP, GLPI
+- Installer GLPI (Apache, MariaDB, PHP)
 
 - Activer et configurer le **plugin LDAP**
 
@@ -242,6 +247,8 @@ Objectif : Automatiser le montage d’un lecteur réseau.
 - Importer les utilisateurs du domaine
 
 - Ajouter `fusioninventory` pour l’inventaire automatique
+
+- Tester une connexion avec un compte Active Directory
 
 ## Analyse avec Wireshark
 
