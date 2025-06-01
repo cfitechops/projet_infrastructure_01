@@ -82,11 +82,15 @@
 
 ### 5. Création et application de GPO
 
-- GPO `Sécurité poste client` :
+- **GPO** `Sécurité poste client` :
 
-  - Désactiver panneau de configuration
+Objectif : Renforcer la sécurité des postes clients.
 
-  - Forcer mot de passe complexe
+-** Désactiver l'accès au panneau de configuration**
+(Configuration utilisateur > Modèles d'administration > Panneau de configuration > Interdire l'accès...)
+
+- **Forcer un mot de passe complexe**
+  (Configuration ordinateur > Paramètres Windows > Paramètres de sécurité > Stratégie de mot de passe > Exiger la complexité)
 
 - GPO `Partage réseau` :
 
