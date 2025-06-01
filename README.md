@@ -82,7 +82,7 @@
 
 ### 5. Création et application de GPO
 
-- **a - GPO** `Sécurité poste client` :
+- **A - GPO** `Sécurité poste client` :
 
 Objectif : Renforcer la sécurité des postes clients.
 
@@ -92,7 +92,7 @@ Objectif : Renforcer la sécurité des postes clients.
 - **Forcer un mot de passe complexe**
   (Configuration ordinateur > Paramètres Windows > Paramètres de sécurité > Stratégie de mot de passe > Exiger la complexité)
 
-- GPO `Partage réseau` :
+- **B - GPO** `Partage réseau` :
 
   - Monter un lecteur réseau automatiquement (ex : `\\SRV-AD-01\Partage`)
 
