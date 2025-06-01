@@ -50,7 +50,7 @@
 
 - Nom : `SRV-AD-01`
 
-- Configuration IP statique : `172.28.10.10/24`, DNS primaire : `127.0.0.1`
+- Configuration IP statique : `172.28.10.10/16`, DNS primaire : `127.0.0.1`
 
 - Renommer l’ordinateur
 
