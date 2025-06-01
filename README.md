@@ -87,10 +87,12 @@
 Objectif : Renforcer la sécurité des postes clients.
 
 - **Désactiver l'accès au panneau de configuration**
-(Configuration utilisateur > Modèles d'administration > Panneau de configuration > Interdire l'accès...)
+
+  `Configuration utilisateur > Modèles d'administration > Panneau de configuration > Interdire l'accès...`
 
 - **Forcer un mot de passe complexe**
-  (Configuration ordinateur > Paramètres Windows > Paramètres de sécurité > Stratégie de mot de passe > Exiger la complexité)
+
+  `Configuration ordinateur > Paramètres Windows > Paramètres de sécurité > Stratégie de mot de passe > Exiger la complexité`
 
 - **B - GPO** `Partage réseau` :
 
