@@ -64,7 +64,7 @@
 
 - Ajouter un utilisateur `etudiant1` et un groupe `Informatique`
 
-### 3. Installation du rôle IIS (Web)
+### 3. Installation du rôle IIS (Web) HTTPS
 
 - Installer le rôle **IIS** (serveur web Windows)
 
