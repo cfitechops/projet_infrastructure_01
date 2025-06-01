@@ -96,9 +96,23 @@ Objectif : Renforcer la sécurité des postes clients.
 
 - **B - GPO** `Partage réseau` :
 
-  - Monter un lecteur réseau automatiquement (ex : `\\SRV-AD-01\Partage`)
+Objectif : Automatiser le montage d’un lecteur réseau.
 
-- Lier les GPO aux OU concernées
+- **Monter automatiquement un lecteur réseau partagé**
+
+  Exemple : `\\SRV-AD-01\Partage` mappé en Z:\
+
+  `Configuration utilisateur > Préférences > Paramètres Windows > Lecteurs mappés`
+
+- **C - GPO** Lier les GPO aux OU concernées:
+
+- Dans la console **Group Policy Management**, fais un clic droit sur l’**OU concernée** (ex. `Utilisateurs` ou `Clients`) >
+
+"**Lier un GPO existant**" > Choisis :
+
+- `Sécurité poste client`
+
+- `Partage réseau`
 
 ### 6. Configuration du partage de fichiers
 
