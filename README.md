@@ -50,7 +50,7 @@
 
 - Nom : `SRV-AD-01`
 
-- Configuration IP statique : `192.168.10.10/24`, DNS primaire : `127.0.0.1`
+- Configuration IP statique : `172.28.10.10/24`, DNS primaire : `127.0.0.1`
 
 - Renommer l’ordinateur
 
@@ -132,7 +132,7 @@
 
 ### 9. Installation de Zabbix Server sur Ubuntu
 
-- Ubuntu Server : `192.168.10.20`
+- Ubuntu Server : `172.28.10.20`
 
 - Installer MariaDB, Apache, PHP, Zabbix Server + frontend
 
@@ -142,7 +142,7 @@
 
 - Installer agent sur `SRV-AD-01`
 
-- Configurer agent pour pointer vers `192.168.10.20`
+- Configurer agent pour pointer vers `172.28.10.20`
 
 - Ajouter hôtes dans Zabbix UI
 
@@ -172,7 +172,7 @@
 
 - Exemple de filtres :
 
-  - `ip.addr == 192.168.10.10`
+  - `ip.addr == 172.28.10.10`
 
   - `tcp.port == 389` (LDAP)
 
