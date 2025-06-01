@@ -82,11 +82,11 @@
 
 ### 5. Création et application de GPO
 
-- **GPO** `Sécurité poste client` :
+- **a - GPO** `Sécurité poste client` :
 
 Objectif : Renforcer la sécurité des postes clients.
 
--** Désactiver l'accès au panneau de configuration**
+- **Désactiver l'accès au panneau de configuration**
 (Configuration utilisateur > Modèles d'administration > Panneau de configuration > Interdire l'accès...)
 
 - **Forcer un mot de passe complexe**
